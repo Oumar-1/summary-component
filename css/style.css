@@ -1,0 +1,133 @@
+/* start global rules */
+:root{
+  --main-color: hsl(245, 75%, 52%);
+  --bg-color: hsl(225, 100%, 98%);
+  --sub-color:hsl(223, 47%, 23%);
+  --sub-text-color:hsl(224, 23%, 55%);
+  --non-color: hsl(225, 100%, 94%);
+}
+body{
+  font-size: 16px;
+  font-family: 'Red Hat Display', sans-serif;
+  background-image: url(../images/pattern-background-mobile.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--non-color);
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+body > img{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  transform: rotate(180deg);
+}
+/* end global rules */
+.card{
+  width: 300px;
+  border-radius: 1.2em;
+  text-align: center;
+  margin: 50px auto;
+  background-color:white;
+  overflow: hidden;
+}
+@media (min-width:375px) {
+  body{
+    background-image: url(../images/pattern-background-desktop.svg);
+  }
+  .card{
+    width: 350px;
+  }
+}
+.hero img{
+  max-width: 100%;
+}
+
+header,
+.sub-card{
+  padding: 0.625em 1em;
+}
+header{
+  padding-top: 25px;
+}
+header h1{
+  font-size: 1.3em;
+  font-weight: 900;
+  margin-bottom: 10px;
+  color: var(--sub-color);
+}
+header p{
+  color: var(--sub-text-color);
+  font-size: 1em;
+}
+.sub-card{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding:30px;
+  font-size:.85em;
+}
+.sub-card img{
+  width: 43px;
+}
+.text{
+  flex-grow: 1;
+  text-align: start;
+  padding-left: 1.1em;
+}
+.text h4{
+  font-size: 1.3;
+  font-weight: 900;
+  margin: 0 0 0.3125em;
+  color: var(--sub-color);
+}
+.text p{
+  font-size: 1em;
+  color: var(--sub-text-color);
+}
+.sub-card > a{
+  color: var(--main-color);
+  font-weight: bold;
+}
+.sub-card > a:hover{
+  text-decoration: none;
+  opacity: 0.8;
+}
+footer button{
+  width: 250px;
+  border: 0;
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  height: 3em;
+  border-radius: 0.625em;
+  font-size: 0.9em;
+  font-weight: 700;
+  box-shadow: 0 15px 15px 5px var(--non-color);
+  cursor: pointer;
+  display: block;
+  margin: 0 auto 20px;
+} 
+@media (min-width:375px) {
+  footer button{
+    height: 2.5em;
+  }
+}
+footer button:hover{
+  opacity: 0.8;
+}
+footer > a{
+  display: inline-block;
+  color: var(--sub-text-color);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9em;
+  padding-bottom: 30px;
+}
+footer > a:hover{
+  color: black;
+}
